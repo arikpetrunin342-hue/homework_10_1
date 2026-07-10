@@ -1,0 +1,12 @@
+import pytest
+from src.widget import mask_account_card, get_date
+
+
+def test_mask_account_card(mask_fixture):
+    value, result = mask_fixture
+    assert mask_account_card(value) == result
+
+
+def test_get_date(date_fixture):
+    date, result_date = date_fixture
+    assert get_date(date) == result_date
