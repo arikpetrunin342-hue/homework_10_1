@@ -220,4 +220,15 @@ __marimo__/
 .idea/
 .venv/
 .coverage/
-.htmlcov/
+htmlcov/.gitignore
+htmlcov/class_index.html
+htmlcov/coverage_html_cb_188fc9a4.js
+htmlcov/favicon_32_cb_c827f16f.png
+htmlcov/function_index.html
+htmlcov/keybd_closed_cb_900cfef5.png
+htmlcov/status.json
+htmlcov/style_cb_0853b3de.css
+htmlcov/z_145eef247bfb46b6___init___py.html
+htmlcov/z_145eef247bfb46b6_masks_py.html
+htmlcov/z_145eef247bfb46b6_processing_py.html
+htmlcov/z_145eef247bfb46b6_widget_py.html
