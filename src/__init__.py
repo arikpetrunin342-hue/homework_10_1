@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict, List
 
 import src.generators
 from src.processing import filter_by_state, sort_by_date

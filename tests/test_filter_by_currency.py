@@ -1,4 +1,5 @@
 import pytest
+
 from src.generators import filter_by_currency
 from tests.conftest import banking_details
 

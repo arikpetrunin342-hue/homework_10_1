@@ -1,4 +1,5 @@
 import pytest
+
 from src.generators import transaction_descriptions
 from tests.conftest import banking_details
 

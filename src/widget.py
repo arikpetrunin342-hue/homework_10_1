@@ -28,6 +28,7 @@ def mask_account_card(mask_account: str) -> str:
 
 from datetime import datetime
 
+
 def get_date(dates: str) -> str:
     """Функция, которая возвращает строку с датой в другом формате"""
     if not dates or len(dates) == 0:

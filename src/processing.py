@@ -1,7 +1,8 @@
 import typing
-from operator import itemgetter
-from typing import Dict, List, Any
 from datetime import datetime
+from operator import itemgetter
+from typing import Any, Dict, List
+
 
 def filter_by_state(
     data: List[Dict[str, str]], key: str = "EXECUTED"

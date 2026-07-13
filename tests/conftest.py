@@ -1,6 +1,5 @@
 import pytest
 
-
 example = [{'id': 41428829, 'state': 'EXECUTED'},
            {'id': 939719570, 'state': 'EXECUTED'},
            {'id': 594226727, 'state': 'CANCELED'},
