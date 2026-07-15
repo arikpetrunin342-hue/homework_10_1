@@ -23,6 +23,7 @@ isort = "^8.0.1"
 pip = "^26.1.2"
 pytest = "^9.1.1"
 pytest-cov = "^7.1.0"
+flake8-pyproject = "^1.2.4"
 
 [tool.pytest.ini_options]
 addopts = [
@@ -33,6 +34,10 @@ addopts = [
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 119
+extend-ignore = ["E203", "W504"]
 
 [tool.mypy]
 disallow_untyped_defs=true
