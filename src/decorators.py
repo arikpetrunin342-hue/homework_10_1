@@ -2,6 +2,8 @@ import functools
 
 
 def log(filename=None):
+    """Декоратор, который логирует результат выполнения функции в файл или на экран.
+    Принимает необязательный аргумент `filename` - путь к файлу для записи."""
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
