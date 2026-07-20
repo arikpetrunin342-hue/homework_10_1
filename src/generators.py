@@ -38,7 +38,7 @@ def card_number_generator(start=1, end=int(1e15)):
         num_str = f"{number:016d}"
 
         formated_card = " ".join(
-            [num_str[i: i + 4] for i in range(0, len(num_str), 4)]
+            [num_str[i : i + 4] for i in range(0, len(num_str), 4)]
         )
 
         yield formated_card

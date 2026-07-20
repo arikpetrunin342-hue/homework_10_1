@@ -1,4 +1,5 @@
 import os
+
 import requests
 
 API_URL = "https://api.apilayer.com/exchangerates_data/latest"
