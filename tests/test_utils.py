@@ -3,16 +3,16 @@ from unittest.mock import patch
 
 from src.utils import load_operations
 
+
 def test_load_valid_json_list():
     """Проверка успешного сценария.
     Функция должна возвращать список транзакций из валидного JSON."""
-    mock_data = [
-        {"id": 1, "amount": 100},
-        {"id": 2, "amount": -50}
-    ]
+    mock_data = [{"id": 1, "amount": 100}, {"id": 2, "amount": -50}]
 
     with patch("builtins.open") as mocked_file:
-        mocked_file.return_value.__enter__.return_value.read.return_value = json.dumps(mock_data)
+        mocked_file.return_value.__enter__.return_value.read.return_value = json.dumps(
+            mock_data
+        )
 
         result = load_operations("any/path.json")
 
@@ -21,6 +21,7 @@ def test_load_valid_json_list():
     assert result[0]["id"] == 1, "ID первой транзакции должен быть равен 1"
     assert result == mock_data, "Список транзакций не совпадает с исходными данными"
 
+
 def test_load_invalid_json_format():
     """Проверка поведения при повреждённом содержимом файла.
     Даже если файл существует, но содержит некорректные символы,
@@ -28,11 +29,14 @@ def test_load_invalid_json_format():
     corrupted_json = "{invalid}"
 
     with patch("builtins.open") as mocked_file:
-        mocked_file.return_value.__enter__.return_value.read.return_value = corrupted_json
+        mocked_file.return_value.__enter__.return_value.read.return_value = (
+            corrupted_json
+        )
 
         result = load_operations("corrupted/file.json")
 
     assert result == [], "При ошибке парсинга должен возвращаться пустой список"
+
 
 def test_load_empty_file():
     """Проверка пустого файла.
@@ -46,6 +50,7 @@ def test_load_empty_file():
 
     assert result == [], "Пустой файл должен приводить к возврату []"
 
+
 def test_load_not_a_list():
     """Проверка формата данных.
     Даже если файл успешно открыт и распарсен,
@@ -54,11 +59,14 @@ def test_load_not_a_list():
     not_a_list = {"key": "value"}
 
     with patch("builtins.open") as mocked_file:
-        mocked_file.return_value.__enter__.return_value.read.return_value = json.dumps(not_a_list)
+        mocked_file.return_value.__enter__.return_value.read.return_value = json.dumps(
+            not_a_list
+        )
 
         result = load_operations("notalist/file.json")
 
     assert result == [], "Если данные не являются списком, должен возвращаться []"
+
 
 def test_load_nonexistent_file():
     """Проверка отсутствия файла.

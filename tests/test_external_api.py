@@ -1,4 +1,5 @@
 from unittest.mock import MagicMock, patch
+
 import pytest
 
 from src.external_api import convert_to_rub
@@ -62,8 +63,8 @@ def test_server_returns_success_false():
         "error": {
             "code": 101,
             "type": "missing_access_key",
-            "info": "You have not supplied an API Access Key!"
-        }
+            "info": "You have not supplied an API Access Key!",
+        },
     }
 
     with patch("requests.get", return_value=mock):

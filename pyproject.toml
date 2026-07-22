@@ -16,6 +16,8 @@ poetry-core = "^2.4.1"
 python-dateutil = "^2.9.0.post0"
 requests = "^2.34.2"
 python-dotenv = "^1.2.2"
+pandas = "^3.0.3"
+openpyxl = "^3.1.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "^26.5.1"
