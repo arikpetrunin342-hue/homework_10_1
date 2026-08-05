@@ -6,6 +6,9 @@ authors = ["Ярослав Петрунин <arikpetrunin342@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
+[tool.flake8]
+extend-ignore = ["E501", "E801", "E802", "F841", "F631", "E203"]
+
 [tool.poetry.dependencies]
 python = "^3.14"
 google-api-python-client = "^2.197.0"

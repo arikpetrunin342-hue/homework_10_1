@@ -13,10 +13,9 @@ def test_get_date(date_fixture):
     assert get_date(date) == result_date
 
 
-@pytest.mark.parametrize("input_date, result_date", [
-        (None, ""),
-        ("2023.02.29", ""),
-        ("2024-02", "")
-])
-def test_get_date(input_date, result_date):
+@pytest.mark.parametrize(
+    "input_date, result_date",
+    [(None, ""), ("2023.02.29", ""), ("2024-02", "")],
+)
+def test_get_date_dop(input_date, result_date):
     assert get_date(input_date) == result_date
